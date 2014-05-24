@@ -8,4 +8,6 @@ Nerdpower::Application.routes.draw do
       get '/profile/:nickname' => 'user#profile', as: :user_profile
     end
   end
+
+  get '/post', to: "post#index"
 end

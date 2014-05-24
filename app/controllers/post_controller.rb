@@ -1,4 +1,5 @@
 class PostController < ApplicationController
+	
 	def index
 		d = get_posts
 		render json: d

@@ -9,5 +9,5 @@ Nerdpower::Application.routes.draw do
     end
   end
 
-  get '/post', to: "post#index"
+  get '/posts', to: "post#index"
 end

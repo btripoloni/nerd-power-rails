@@ -1,6 +1,9 @@
-controllers.feedCtrl = ['$scope', function($scope) {
+controllers.feedCtrl = ['$scope','$http', function($scope, $http) {
 
-  $scope.posts = [ { content: "Estou comendo pavê de copo" } ]
+  $http({method: 'GET', url: '/posts'}).
+    success(function(data, status, headers, config) {
+      $scope.posts = data;
+    });
 
   $scope.createPost = function() {
     var newPost = { content: $scope.content }

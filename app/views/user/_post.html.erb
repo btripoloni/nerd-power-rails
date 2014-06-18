@@ -15,11 +15,11 @@
       <a ng-href="#" ng-click="removePost(post.id, $index)">
         <span class="fa fa-trash-o pull-right"></span>
       </a>
-      <img ng-src="{{post.user.avatar}}" class="pull-left img-rounded media-object" >
-      <span style="font-size:22px;"data-ng-bind="post.user.name"></span>
+      <a ng-href="user/profile/{{post.user.nickname}}">
+        <img ng-src="{{post.user.avatar}}" class="pull-left img-rounded media-object" >
+        <span style="font-size:22px;"data-ng-bind="post.user.name"></span>
+      </a>
       <p data-ng-bind="post.content"> </p>
     </div> <!-- post -->
-
   </div> <!-- .posts -->
-
 </div> <!-- #feed -->

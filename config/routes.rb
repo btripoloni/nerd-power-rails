@@ -10,5 +10,7 @@ Nerdpower::Application.routes.draw do
   end
   namespace :api do
     get "/post", to: "post#index"
+    post "/post", to: "post#create"
+    delete "/post/:id", to: "post#destroy"
   end
 end

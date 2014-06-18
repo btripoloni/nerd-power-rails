@@ -5,7 +5,7 @@ module Api
 
     def index
       post = Post.includes(:user).all
-      render json: post, include: :user, except: :user_id
+      render json: post, include: [user:{except: [:created_at, :updated_at]}], except: :user_id
     end
 
     def create

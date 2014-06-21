@@ -16,7 +16,7 @@ module Api
       end
     end
     def destroy
-      @post = Post.find_by_id(params[:id]).destroy
+      @post = current_user.posts.find_by_id(params[:id]).destroy
       head :ok
     end
     private

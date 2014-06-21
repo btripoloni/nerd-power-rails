@@ -1,4 +1,6 @@
-controllers.feedCtrl = ['$scope','$http', function($scope, $http) {
+controllers.feedCtrl = ['$scope','$http', '$cookies', function($scope, $http, $cookies) {
+
+  $scope.user_id = $cookies.id_user;
 
   $http.get('api/post').
     success(function(data) {

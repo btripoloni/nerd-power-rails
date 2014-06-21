@@ -2,14 +2,14 @@ controllers.feedCtrl = ['$scope','$http', '$cookies', function($scope, $http, $c
 
   $scope.user_id = $cookies.id_user;
 
-  $http.get('api/post').
+  $http.get('/api/post').
     success(function(data) {
       $scope.posts = data;
   });
 
   $scope.createPost = function() {
     var post = {"post":{"content": $scope.content}};
-    $http.post("api/post", post).success(function(data){
+    $http.post("/api/post", post).success(function(data){
       $scope.posts.unshift(data);
       $scope.content = null;
       console.log("hello");
@@ -17,7 +17,7 @@ controllers.feedCtrl = ['$scope','$http', '$cookies', function($scope, $http, $c
   };
 
   $scope.removePost = function(id, index){
-    $http.delete("api/post/"+id).success(function(){
+    $http.delete("/api/post/"+id).success(function(){
         $scope.posts.splice(index, 1);
     });
   };

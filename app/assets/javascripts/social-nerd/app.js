@@ -1,2 +1,2 @@
-var socialNerd = angular.module('socialNerd', [])
+var socialNerd = angular.module('socialNerd', ['angularMoment', 'ngCookies'])
 var controllers = {}

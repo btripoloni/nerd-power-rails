@@ -17,3 +17,9 @@ rerun.txt
 pickle-email-*.html
 .project
 config/initializers/secret_token.rb
+app/assets/jquery/MIT-LICENSE.txt
+app/assets/jquery/bower.json
+app/assets/jquery/dist/jquery.js
+app/assets/jquery/dist/jquery.min.js
+app/assets/jquery/src/ajax.js
+app/assets/jquery/dist/jquery.min.map

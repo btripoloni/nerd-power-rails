@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
-gem 'angularjs-rails'
-gem 'bootstrap-sass-rails'
+#Ruby gems
+#gem 'angularjs-rails'
+#gem 'bootstrap-sass-rails'
+gem "bower-rails", "~> 0.7.3"
 gem 'devise'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
@@ -17,12 +20,18 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'therubyracer'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
-gem 'font-awesome-rails'
-
+#gem 'font-awesome-rails'
+#gem 'api-pagination'
+#gem 'will_paginate'
+#gem 'rails-assets-angular-moment'
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+end
+
+group :development, :test do
+  gem 'sqlite3'
 end
 
 group :test do
